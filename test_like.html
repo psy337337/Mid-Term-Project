@@ -4,11 +4,24 @@
     </head>
     <body>
         <script type="text/javascript">
-            function clicke1(){
-                document.getElementById("test1").style.display='inline';
+            var like_name=["Bass","Music","Trip","Seventeen","Apink","Game","Concert","Food","Dance"]
+            var url =["https://www.youtube.com/embed/Lok_QtefXMI",
+            "https://www.youtube.com/embed/89-UheKmXDg",
+            "https://www.youtube.com/embed/tiHTgTFEdos",
+            "https://www.youtube.com/embed/mPqj8GSgx1g",
+            "https://www.youtube.com/embed/cRMffItbH90",
+            "https://www.youtube.com/embed/wKjpYOR8_F0",
+            "https://www.youtube.com/embed/rz01GkGTrJo",
+            "https://www.youtube.com/embed/ECt5ChMGn1Y",
+            "https://www.youtube.com/embed/NkuVo3p3TOk" ]
+            function open(num){
+                
+                document.getElementById("popup").style.display='inline';
+                document.getElementById("inName").innerHTML = like_name[num-1];
+                document.getElementById("inVideo").src = url[num-1];
             }
-            function closePop() {
-                document.getElementById("test1").style.display = "none";
+            function close() {
+                document.getElementById("popup").style.display = "none";
             }
         </script>
         <div>
@@ -24,24 +37,23 @@
         <div>
             <ul class="myLike" >
                 <li>
-                    <a href="javascript:clicke1();">
+                    <a href="javascript:open(3);">
                         <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
                     </a>
                 </li>
             </ul>
         </div>
 
-        <div id="test1" class="layer-popup">
+        <div id="popup" class="layer-popup">
             <div class="popup_box">
                 <div class="popup_cont">
                     <div class="popup_in">
-                        <p>Bass</p>
-                        <iframe src="https://www.youtube.com/embed/Lok_QtefXMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p id="inName"></p>
+                        <iframe id="inVideo" src="https://www.youtube.com/embed/Lok_QtefXMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="popup_btn">
-                        <a href="javascript:closePop();">Close</a>
-                    </div>
-
+                </div>
+                <div class="popup_btn">
+                    <a href="javascript:close();">Close</a>
                 </div>
         </div>
     </body>
