@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <title>Profile</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function clicke1(){
+                document.getElementById("test1").style.display='inline';
+            }
+            function closePop() {
+                document.getElementById("test1").style.display = "none";
+            }
+        </script>
+        <div>
+            <nav class="menu">
+                <ul>
+                    <li><a href = "profile.html">About me</a></li>
+                    <li><a href = "test_like.html">Like</a></li>
+                    <li><a href = "contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <ul class="myLike" >
+                <li>
+                    <a href="javascript:clicke1();">
+                        <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="test1" class="layer-popup">
+            <div class="popup_box">
+                <div class="popup_cont">
+                    <div class="popup_in">
+                        <p>Bass</p>
+                        <iframe src="https://www.youtube.com/embed/Lok_QtefXMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="popup_btn">
+                        <a href="javascript:closePop();">Close</a>
+                    </div>
+
+                </div>
+        </div>
+    </body>
+    <style>
+        
+        .menu li {
+            display: inline;
+            margin: 70px;
+            line-height: 40px;
+        }
+        .menu ul {
+            padding-left: 0px;
+        }
+        .menu{
+            display: flex;
+            background-color: #333;
+            Justify-content : center;
+
+        }
+        .menu li a{
+            display:inline-block;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        .menu li :hover{
+            color: rgb(149, 199, 255);
+        }
+        .myLike{
+            display: grid;
+            margin-top: 70px;
+            grid-template-columns: 350px 350px 350px;
+            grid-template-rows: 200px 200px 200px;
+            column-gap: 10px;
+            row-gap: 10px;
+            Justify-content : center;
+            align-items: center;
+        }
+        .myLike iframe{
+            display: block;
+            width: 350px;
+            height: 180px;
+        }
+        .myLike a{
+            text-decoration: none;
+        }
+        .myLike em{
+            font-size: 16px;
+            font-weight: 300;
+            color: #222;
+            letter-spacing: 2px; 
+            font-family: 'Oswald', sans-serif;
+        }
+        /*popup*/
+        .layer-popup {
+            position:fixed;
+            top:0;
+            left:0;
+            z-index: 10000;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); 
+            display: none;
+            
+        }
+        /*팝업 박스*/
+        .popup_box{   
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            z-index: 10000;
+            display: block;
+            width: 700px;
+            height: 400px;
+            margin-left: -370px;
+            margin-top: -200px;
+            background: #fff;
+        }
+        .popup_in{
+            margin: 50px;
+            margin-bottom: 30px;
+        }
+        /*컨텐츠 영역*/
+        .popup_in p{
+            font-size: 40px;
+            line-height: 0.25em;
+            padding-bottom: 30px;
+            padding-left: 5px;
+            border-bottom: 1px solid #ddd;
+            font-family: sans-serif;
+        }
+        .popup_in iframe{
+            margin-top: -15px;
+            display: block;
+            width: 500px;
+            height: 250px;
+        }
+        .popup_btn{
+            display:table;
+            table-layout: fixed;
+            width:100%;     
+            background:#ECECEC;
+            text-align: center;
+            
+        }
+        .popup_btn a{
+            color: #333;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            line-height: 100px;
+        }
+    </style>
+</html>
