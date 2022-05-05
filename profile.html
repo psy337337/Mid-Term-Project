@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Profile</title>
+    </head>
+    <body>
+        
+        
+        <div>
+            <nav class="menu">
+                <ul>
+                    <li><a href = "profile.html">About me</a></li>
+                    <li><a href = "like.html">Like</a></li>
+                    <li><a href = "contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class = "profile">
+            <h1>Profile</h1>
+            <div style="float:left; margin-right:20px;">
+                <img wigth = "240px" height="300px" src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+            </div>
+            <div class ="Info">
+                <p class="name">박서영</p>
+                <p class="name_en">PARK SEOYEONG<p>
+                <dl class="pf_dl">
+                    <dt>출생</dt>
+                    <dd>2000.11.21</dd>
+                    <dt>소속</dt>
+                    <dd>단국대 컴퓨터공학과</dd>
+
+
+            </div>
+        </div>
+        
+    </body>
+    <style>
+        
+        .menu li {
+            display: inline;
+            margin: 70px;
+            line-height: 40px;
+        }
+        .menu ul {
+            padding-left: 0px;
+        }
+        .menu{
+            display: flex;
+            background-color: black;
+            Justify-content : center;
+
+        }
+        .menu li a{
+            display:inline-block;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        .menu li :hover{
+            color: rgb(149, 199, 255);
+        }
+        .profile{
+            
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .Info {
+            float:left;
+            padding-top: 10px;
+
+        }
+        .pf_dl{
+            overflow: hidden;
+            font-size: 16px;
+            line-height: 24px;
+            color: #666;
+            margin-top: 15px;
+        }
+        .pf_dl dt {
+            float: left;
+            clear: both;
+            font-weight: 600;
+            color: #999;
+            width: 90px;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        .pf_dl dd {
+            margin-left: 90px;
+            margin-bottom: 5px;
+            font-size: 13px;
+            letter-spacing: -0.025em;
+            font-family: Malgun Gothic, dotum, 'Nanum Square', sans-serif;
+        }
+    </style>
+</html>
