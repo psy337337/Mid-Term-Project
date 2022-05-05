@@ -24,7 +24,7 @@
         <div class="myLike">
                 <span>
                     <a href="javascript:clicke1();">
-                        <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                        <iframe src="https://www.youtube.com/embed/Lok_QtefXMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </a>
                 </span>
                 <span>
@@ -96,6 +96,7 @@
         }
         .myLike{
             display: grid;
+            margin-top: 70px;
             grid-template-columns: 144px 144px 144px;
             grid-template-rows: 180px 180px 180px;
             column-gap: 10px;
@@ -104,6 +105,11 @@
             align-items: center;
         }
         .myLike img{           
+            display: block;
+            width: 144px;
+            height: 180px;
+        }
+        .myLike iframe{
             display: block;
             width: 144px;
             height: 180px;
