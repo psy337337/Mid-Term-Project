@@ -21,30 +21,53 @@
             </nav>
         </div>
 
-        <div>
-            <ul class="myLike" >
-                <li>
+        <div class="myLike">
+                <span>
                     <a href="javascript:clicke1();">
                         <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
                     </a>
-                </li>
-            </ul>
-        </div>
-        <div id="test1" class="layer-popup" style="left:100px; top:100px; width:100px; height:100px;display: none;z-index: 100;">
-            <div class="popup_box">
-                <div style="height: 10px; width: 375px; float: top;">
-                  <a href="javascript:closePop();"><img src="/static/img/ic_close.svg" class="m_header-banner-close" width="30px" height="30px"></a>
-                </div>
-                <!--팝업 컨텐츠 영역-->
-                <div class="popup_cont">
-                    <h2>스키타기</h2>
-                    <img src="https://blog.lgchem.com/wp-content/uploads/2017/01/freerider-498473.jpg"/>
-          
-                </div>
-                <!--팝업 버튼 영역-->
-                <div class="popup_btn" style="float: bottom; margin-top: 200px;">
-                    <a href="javascript:closePop();">닫기</a>
-                </div>
+                </span>
+                <span>
+                    <a href="javascript:clicke1();">
+                        <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    </a>
+                </span>
+                <span class = "line" style="margin-right: 0px !important;">
+                    <a href="javascript:clicke1();">
+                        <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    </a>
+                </span>
+                <span>
+                    <a href="javascript:clicke1();">
+                        <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    </a>
+                </span>
+                <span>
+                    <a href="javascript:clicke1();">
+                        <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    </a>
+                </span>
+                <span class = "line" style="margin-right: 0px !important;">
+                    <a href="javascript:clicke1();">
+                        <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    </a>
+                </span>
+                <span>
+                    <a href="javascript:clicke1();">
+                        <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    </a>
+                </span>
+                <span>
+                    <a href="javascript:clicke1();">
+                        <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    </a>
+                </span>
+                <span class = "line">
+                    <a href="javascript:clicke1();">
+                        <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    </a>
+                </span>
+            
         </div>
     </body>
     <style>
@@ -71,24 +94,26 @@
         .menu li :hover{
             color: rgb(149, 199, 255);
         }
-        
-        
+        .myLike{
+            display: grid;
+            grid-template-columns: 144px 144px 144px;
+            grid-template-rows: 180px 180px 180px;
+            column-gap: 10px;
+            row-gap: 10px;
+            Justify-content : center;
+            align-items: center;
+        }
+        .myLike img{           
+            display: block;
+            width: 144px;
+            height: 180px;
+        }
+        .myLike span {
+            float: left;
+            width: 144px;
+            margin: 9px;
+        }
 
-        .test1 {position:fixed;top:0;left:0;z-index: 10000; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4); }
-/*팝업 박스*/
-.popup_box{position: relative;top:50%;left:50%; overflow: auto; height: 600px; width:375px;transform:translate(-50%, -50%);z-index:1002;box-sizing:border-box;background:#fff;box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.35);-webkit-box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.35);-moz-box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.35);}
-/*컨텐츠 영역*/
-.popup_box .popup_cont {padding:50px;line-height:1.4rem;font-size:14px; }
-.popup_box .popup_cont h2 {padding:15px 0;color:#333;margin:0;}
-.popup_box .popup_cont p{ border-top: 1px solid #666;padding-top: 30px;}
-/*버튼영역*/
-.popup_box .popup_btn {display:table;table-layout: fixed;width:100%;height:70px;background:#ECECEC;word-break: break-word;}
-.popup_box .popup_btn a {position: relative; display: table-cell; height:70px;  font-size:17px;text-align:center;vertical-align:middle;text-decoration:none; background:#ECECEC;}
-.popup_box .popup_btn a:before{content:'';display:block;position:absolute;top:26px;right:29px;width:1px;height:21px;background:#fff;-moz-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg);}
-.popup_box .popup_btn a:after{content:'';display:block;position:absolute;top:26px;right:29px;width:1px;height:21px;background:#fff;-moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
-.popup_box .popup_btn a.close_day {background:#5d5d5d;}
-.popup_box .popup_btn a.close_day:before, .popup_box .popup_btn a.close_day:after{display:none;}
-/*오버레이 뒷배경*/
-.popup_overlay{position:fixed;top:0px;right:0;left:0;bottom:0;z-index:1001;;background:rgba(0,0,0,0.5);}
+        
     </style>
 </html>
