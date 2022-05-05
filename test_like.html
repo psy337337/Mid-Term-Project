@@ -15,10 +15,9 @@
             "https://www.youtube.com/embed/ECt5ChMGn1Y",
             "https://www.youtube.com/embed/NkuVo3p3TOk" ]
             function open(num){
-                
                 document.getElementById("popup").style.display='inline';
-                document.getElementById("inName").innerHTML = like_name[num-1];
-                document.getElementById("inVideo").src = url[num-1];
+                document.getElementById("inName").innerHTML = like_name[num];
+                document.getElementById("inVideo").src = url[num];
             }
             function close() {
                 document.getElementById("popup").style.display = "none";
@@ -34,14 +33,61 @@
             </nav>
         </div>
 
-        <div>
-            <ul class="myLike" >
-                <li>
-                    <a href="javascript:open(3);">
-                        <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
-                    </a>
-                </li>
-            </ul>
+        <div class="myLike">
+            <span>
+                <a href="javascript:open(0);">
+                    <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    <em>Bass</em>
+                </a>
+            </span>
+            <span>
+                <a href="javascript:open(1);">
+                    <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    <em>Music</em>
+                </a>
+            </span>
+            <span>
+                <a href="javascript:open(2);">
+                    <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    <em>Trip</em>
+                </a>
+            </span>
+            <span>
+                <a href="javascript:open(3);">
+                    <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    <em>Seventeen</em>
+                </a>
+            </span>
+            <span>
+                <a href="javascript:open(4);">
+                    <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    <em>Apink</em>
+                </a>
+            </span>
+            <span>
+                <a href="javascript:open(5);">
+                    <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    <em>Game</em>
+                </a>
+            </span>
+            <span>
+                <a href="javascript:open(6);">
+                    <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    <em>Concert</em>
+                </a>
+            </span>
+            <span>
+                <a href="javascript:open(7);">
+                    <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    <em>Food</em>
+                </a>
+            </span>
+            <span>
+                <a href="javascript:open(8);">
+                    <img src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
+                    <em>Dance</em>
+                </a>
+            </span>
         </div>
 
         <div id="popup" class="layer-popup">
@@ -84,20 +130,24 @@
         .myLike{
             display: grid;
             margin-top: 70px;
-            grid-template-columns: 350px 350px 350px;
+            grid-template-columns: 250px 250px 250px;
             grid-template-rows: 200px 200px 200px;
             column-gap: 10px;
             row-gap: 10px;
             Justify-content : center;
             align-items: center;
         }
-        .myLike iframe{
+        .myLike img{
             display: block;
-            width: 350px;
+            width: 100%;
             height: 180px;
         }
         .myLike a{
             text-decoration: none;
+        }
+        .myLike :hover{
+            text-decoration: underline rgb(119, 153, 192);
+            text-underline-position:under;
         }
         .myLike em{
             font-size: 16px;
