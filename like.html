@@ -31,6 +31,9 @@
             }
             function close() {
                 document.getElementById("popup").style.display = "none";
+                //close눌렀을때 동영상 재생 중일 수 있으니 동영상 소스 그냥 날려버림
+                document.getElementById("inVideo").src="";
+
             }
         </script>
         <div>
@@ -165,6 +168,10 @@
         .myLike :hover{
             text-decoration: underline rgb(119, 153, 192);
             text-underline-position:under;
+        }
+        .myLike :hover img{
+            opacity: 0.4;
+            filter: alpha(opacity=40);
         }
         .myLike em{
             font-size: 16px;
