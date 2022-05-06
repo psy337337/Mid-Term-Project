@@ -15,29 +15,41 @@
             </nav>
         </div>
         
-        <div class = "profile">
-            <h1>Profile</h1>
-            <div style="float:left; margin-right:20px;">
-                <img wigth = "240px" height="300px" src="http://cdn.ggilbo.com/news/photo/201705/373375_286526_3547.png">
-            </div>
-            <div class ="Info">
-                <p class="name">박서영</p>
-                <p class="name_en">PARK SEOYEONG<p>
-                <dl class="pf_dl">
-                    <dt>출생</dt>
-                    <dd>2000.11.21</dd>
-                    <dt>소속</dt>
-                    <dd>단국대 컴퓨터공학과</dd>
-                    <dt>거주지</dt>
-                    <dd>경기도 하남시</dd>
-                    <dt>MBTI</dt>
-                    <dd>ISTP</dd>
+        <section>
+            <div class = "profile">
+                <h1>Profile</h1>
+                <div style="float:left; margin-right:20px;">
+                    <img wigth = "240px" height="300px" src="https://play-lh.googleusercontent.com/vvR0w2MhaXWZZCn8frTJpRaaU7isvwaDNxuoHDmR2geFda5shUe3feZwuxEMMQyNWgo">
+                </div>
+                <div class ="Info">
+                    <p class="name">박서영</p>
+                    <p class="name_en">PARK SEOYEONG<p>
+                    <dl class="pf_dl">
+                        <dt>출생</dt>
+                        <dd>2000.11.21</dd>
+                        <dt>소속</dt>
+                        <dd>단국대 컴퓨터공학과</dd>
+                        <dt>거주지</dt>
+                        <dd>경기도 하남시</dd>
+                        <dt>MBTI</dt>
+                        <dd>ISTP</dd>
 
+                </div>
             </div>
-        </div>
+        </section>
+
+        <footer>
+            <em>OpenSW Mid-Term-Project</em>
+            <p>call : 010-2362-5174</p>
+            <p>e-mail : psy337337@naver.com</p>
+        </footer>
         
     </body>
     <style>
+        body{
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url('./backimg.jpg');
+
+        }
         
         .menu li {
             display: inline;
@@ -64,9 +76,10 @@
         .profile{
             
             position: absolute;
-            top: 40%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+            
         }
         .profile h1{
             font-size: 35px;
@@ -118,6 +131,32 @@
             font-size: 13px;
             letter-spacing: -0.025em;
             font-family: Malgun Gothic, dotum, 'Nanum Square', sans-serif;
+        }
+        footer{
+            padding: 10px;
+            height: 70px;
+            width: 99%;
+            position:absolute;
+            bottom:0;
+            background-color: #ECECEC;
+        }
+        footer em{
+            float:left;
+            color: #222;
+            letter-spacing: 2px; 
+            font-family: 'Oswald', sans-serif;
+            margin-left: 40px;
+            margin-top: 20px;
+        }
+        footer p{
+            text-align: right;
+            line-height: 0.25em;
+            margin-right: 40px;
+            font-size: 12px;
+            font-weight: 300;
+            color: #222;
+            letter-spacing: 2px; 
+            font-family: 'Oswald', sans-serif;
         }
     </style>
 </html>

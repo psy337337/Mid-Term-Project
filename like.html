@@ -14,10 +14,20 @@
             "https://www.youtube.com/embed/rz01GkGTrJo",
             "https://www.youtube.com/embed/ECt5ChMGn1Y",
             "https://www.youtube.com/embed/NkuVo3p3TOk" ]
+            var like_cont=["베이스 커버 영상을 보는 것과 연주하는 것을 좋아합니다.",
+            "음악 감상하는 것을 좋아합니다. 장르는 가리지 않는 편입니다.",
+            "여행가는 것을 좋아합니다. 특히 야경이나 시장 구경을 좋아합니다.",
+            "2015년부터 캐럿이었습니다. 고등학교 시절 가장 좋아했던 아이돌입니다.",
+            "2020년부터 판다였습니다. 현재 열심히 덕질 중인 아이돌입니다.",
+            "게임을 좋아합니다. 주로 RPG게임이나 리듬게임류를 좋아합니다. 컴퓨터, 오락실, 모바일 등 기기는 가리지 않습니다.",
+            "콘서트가는 것을 좋아합니다. 좋아하는 아이돌 뿐만 아니라 관심있는 모든 가수들의 콘서트 가는 것을 좋아합니다.",
+            "맛집을 찾고 맛집에 방문하여 맛있는 음식을 먹는 것을 좋아합니다.",
+            "춤을 보는 것과 추는 것 모두 좋아합니다."]
             function open(num){
                 document.getElementById("popup").style.display='inline';
                 document.getElementById("inName").innerHTML = like_name[num];
                 document.getElementById("inVideo").src = url[num];
+                document.getElementById("inCont").innerHTML = like_cont[num];
             }
             function close() {
                 document.getElementById("popup").style.display = "none";
@@ -94,8 +104,9 @@
                 <div class="popup_box">
                     <div class="popup_cont">
                         <div class="popup_in">
-                            <p id="inName"></p>
+                            <p id="inName" class="title"></p>
                             <iframe id="inVideo" src="https://www.youtube.com/embed/Lok_QtefXMI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p id="inCont" class="cont"></p>
                         </div>
                     </div>
                     <div class="popup_btn">
@@ -182,7 +193,7 @@
             z-index: 10000;
             display: block;
             width: 700px;
-            height: 400px;
+            height: 500px;
             margin-left: -370px;
             margin-top: -200px;
             background: #fff;
@@ -192,7 +203,7 @@
             margin-bottom: 30px;
         }
         /*컨텐츠 영역*/
-        .popup_in p{
+        .popup_in .title {
             font-size: 40px;
             line-height: 0.25em;
             padding-bottom: 30px;
@@ -200,6 +211,14 @@
             border-bottom: 1px solid #ddd;
             font-family: sans-serif;
             letter-spacing: 4px;
+        }
+        .popup_in .cont {
+            font-size: 15px;
+            padding-top: 5px;
+            padding-left: 5px;
+            font-weight: 500;
+            color: #222;
+            font-family: Malgun Gothic, dotum, 'Nanum Square', sans-serif;
         }
         .popup_in iframe{
             margin-top: -15px;
@@ -224,9 +243,12 @@
             line-height: 100px;
         }
         footer{
-            margin-top: 60px;
+            
             padding: 10px;
             height: 70px;
+            width: 99%;
+            position:absolute;
+            bottom:0;
             background-color: #ECECEC;
         }
         footer em{
